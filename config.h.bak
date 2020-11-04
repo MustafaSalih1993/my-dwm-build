@@ -96,8 +96,8 @@ static Key keys[] = {
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY | ShiftMask,           XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY | ShiftMask,           XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 5%-;refbar") },
-    {MODKEY,                        XK_F10,    spawn,          SHCMD("amixer sset Master 5%+;refbar")},
+    { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 5%-;killsleep") },
+    {MODKEY,                        XK_F10,    spawn,          SHCMD("amixer sset Master 5%+;killsleep")},
     {MODKEY | ControlMask,          XK_r,      spawn,          SHCMD("rst")},
     TAGKEYS(XK_1,                      0)
     TAGKEYS(XK_2,                      1)
