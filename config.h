@@ -5,18 +5,18 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Font Awesome 5 Free:size:10"};
+static const char *fonts[]          = { "Font Awesome 5 Free:size=10" };
 static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_purp[]        = "#CC99FF";
+static const char col_purp[]        = "#5002A3";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-    [SchemeSel]  = { col_gray4, col_purp,  col_purp  },
+    [SchemeSel]  = { col_gray1, col_purp,  col_purp  },
 };
 
 /* tagging */
@@ -96,8 +96,8 @@ static Key keys[] = {
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY | ShiftMask,           XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY | ShiftMask,           XK_period, tagmon,         {.i = +1 } },
-    { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 5%-;killsleep") },
-    {MODKEY,                        XK_F10,    spawn,          SHCMD("amixer sset Master 5%+;killsleep")},
+    { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 1%-;killsleep") },
+    { MODKEY,                       XK_F10,    spawn,          SHCMD("amixer sset Master 1%+;killsleep")},
     {MODKEY | ControlMask,          XK_r,      spawn,          SHCMD("rst")},
     TAGKEYS(XK_1,                      0)
     TAGKEYS(XK_2,                      1)
