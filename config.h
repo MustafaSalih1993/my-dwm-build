@@ -16,11 +16,11 @@ static const char col_purp[]        = "#5002A3";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-    [SchemeSel]  = { col_gray1, col_purp,  col_purp  },
+    [SchemeSel]  = { col_gray4, col_purp,  col_purp  },
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -30,7 +30,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     { "Gimp",     NULL,       NULL,       0,                     1,           -1 },
     { "Firefox",  NULL,       NULL,       1 << 2,	         0,           -1 },
-    { "Code",     NULL,	      NULL,	      2,	         0,           -1 },
+    { "Code",     NULL,	      NULL,	  2,    	         0,           -1 },
 };
 
 /* layout(s) */
@@ -41,10 +41,10 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 #include "fibonacci.c"
 static const Layout layouts[] = {
     /* symbol     arrange function */
+    { "[@]",      spiral  },
     { "[]=",      tile },    /* first entry is default */
     { "><>",      NULL },    /* no layout function means floating behavior */
     { "[M]",      monocle },
-    { "[@]",      spiral  },
     { "[\\]",     dwindle  },
 };
 
