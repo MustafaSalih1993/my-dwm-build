@@ -16,7 +16,7 @@ static const char col_purp[]        = "#5002A3";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-    [SchemeSel]  = { col_gray4, col_purp,  col_purp  },
+    [SchemeSel]  = { col_gray4, col_purp,  col_purp  }
 };
 
 /* tagging */
@@ -31,10 +31,11 @@ static const Rule rules[] = {
     { "Gimp",     NULL,       NULL,       0,                     1,           -1 },
     { "Firefox",  NULL,       NULL,       1 << 2,	         0,           -1 },
     { "Code",     NULL,	      NULL,	  2,    	         0,           -1 },
+    { "Pcmanfm",  NULL,	      NULL,	  5,    	         0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 
