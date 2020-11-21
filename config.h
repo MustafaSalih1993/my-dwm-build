@@ -12,7 +12,7 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_purp[]        = "#5002A3";
+static const char col_purp[]        = "#8902a1";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -96,6 +96,7 @@ static Key keys[] = {
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY | ShiftMask,           XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY | ShiftMask,           XK_period, tagmon,         {.i = +1 } },
+    { ControlMask,                  XK_Insert, spawn,          SHCMD("ss") },
     { MODKEY,                       XK_F6,     spawn,          SHCMD("playerctl previous") },
     { MODKEY,                       XK_F7,     spawn,          SHCMD("playerctl play-pause") },
     { MODKEY,                       XK_F8,     spawn,          SHCMD("playerctl next") },
