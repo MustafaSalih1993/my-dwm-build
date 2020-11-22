@@ -103,6 +103,7 @@ static Key keys[] = {
     { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 1%-;killsleep") },
     { MODKEY,                       XK_F10,    spawn,          SHCMD("amixer sset Master 1%+;killsleep")},
     {MODKEY | ControlMask,          XK_r,      spawn,          SHCMD("rst")},
+    {MODKEY | ControlMask,          XK_p,      spawn,          SHCMD("kpwr")},
     TAGKEYS(XK_1,                      0)
     TAGKEYS(XK_2,                      1)
     TAGKEYS(XK_3,                      2)
