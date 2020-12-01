@@ -96,7 +96,7 @@ static Key keys[] = {
     { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
     { MODKEY | ShiftMask,           XK_comma,  tagmon,         {.i = -1 } },
     { MODKEY | ShiftMask,           XK_period, tagmon,         {.i = +1 } },
-    { ControlMask,                  XK_Insert, spawn,          SHCMD("ss;killsleep") },
+    { ControlMask,                  XK_Insert, spawn,          SHCMD("ss") },
     { MODKEY,                       XK_F6,     spawn,          SHCMD("playerctl previous; mocp -r") },
     { MODKEY,                       XK_F7,     spawn,          SHCMD("playerctl play-pause; mocp -G") },
     { MODKEY,                       XK_F8,     spawn,          SHCMD("playerctl next; mocp -f") },
