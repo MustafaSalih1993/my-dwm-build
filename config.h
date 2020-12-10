@@ -1,48 +1,51 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Font Awesome 5 Free:size=10" };
+static const unsigned int borderpx  = 1;       
+static const unsigned int snap      = 32;      
+static const int showbar            = 1;       
+static const int topbar             = 1;  
+static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=10"
+					"Font Awesome 5 Free:pixelsize=11:autohint=1", 
+    		                        "Font Awesome 5 Brands:pixelsize=11:autohint=1", 
+					"Font Awesome 5 Free:pixelsize=11:style=solid:autohint=1"};
 static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=10";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
-static const char col_purp[]        = "#A06CD5";
+
+static const char col_bg[]          = "#1a1b26";
+static const char col_fg[]          = "#a9b1d6";
+static const char col_border[]      = "#ff7a93";
+static const char col_sfg[]         = "#bb9af7";
+static const char col_sbg[]         = "#444b6a";
+static const char col_sborder[]     = "#b9f27c";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
-    [SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-    [SchemeSel]  = { col_gray4, col_purp,  col_purp  }
+    [SchemeNorm] = { col_fg, col_bg, col_border },
+    [SchemeSel]  = { col_fg, col_sbg,  col_sborder  }
 };
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
+static const char *tags[] = {"", "", "", "", "", ""};
+
 
 static const Rule rules[] = {
     /* xprop(1):
      *	WM_CLASS(STRING) = instance, class
-     *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
     { "Firefox",  NULL,       NULL,       1 << 2,	         0,           -1 },
     { "Code",     NULL,	      NULL,	  2,    	         0,           -1 },
-    { "Spotify",     NULL,       NULL,        4,         1,     -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.52; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const float mfact     = 0.53; /* master area [0.05..0.95] */
+static const int nmaster     = 1;    
+static const int resizehints = 1;
 
 #include "fibonacci.c"
 static const Layout layouts[] = {
     /* symbol     arrange function */
     { "[]=",      tile },    /* first entry is default */
-    { "><>",      NULL },    /* no layout function means floating behavior */
+    { "><>",      NULL },    
     { "[M]",      monocle },
     { "[\\]",     dwindle  },
     { "[@]",      spiral  },
@@ -51,17 +54,18 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG)						\
-    { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+        { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
+
+
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_sbg, "-sf", col_sfg, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *firefox[] = {"firefox", NULL};
