@@ -5,11 +5,11 @@ static const unsigned int borderpx  = 1;
 static const unsigned int snap      = 32;      
 static const int showbar            = 1;       
 static const int topbar             = 1;  
-static const char *fonts[]          = { "SauceCodePro Nerd Font Mono:size=10"
-					"Font Awesome 5 Free:pixelsize=11:autohint=1", 
-    		                        "Font Awesome 5 Brands:pixelsize=11:autohint=1", 
-					"Font Awesome 5 Free:pixelsize=11:style=solid:autohint=1"};
-static const char dmenufont[]       = "SauceCodePro Nerd Font Mono:size=10";
+static const char *fonts[]          = { "MudheadFREE:pixelsize=14:autohint=auto"
+					"Font Awesome 5 Free:pixelsize=12:autohint=1", 
+    		                        "Font Awesome 5 Brands:pixelsize=12:autohint=1", 
+					"Font Awesome 5 Free:pixelsize=12:style=solid:autohint=1"};
+static const char dmenufont[]       = "MudheadFREE:size=14";
 
 static const char col_bg[]          = "#1a1b26";
 static const char col_fg[]          = "#a9b1d6";
