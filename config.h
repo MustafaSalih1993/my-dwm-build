@@ -1,11 +1,11 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;       
+static const unsigned int borderpx  = 3;       
 static const unsigned int snap      = 32;      
 static const int showbar            = 1;       
 static const int topbar             = 1;  
-static const char *fonts[]          = { "MudheadFREE:pixelsize=14:autohint=auto"
+static const char *fonts[]          = { "Exo2-Regular:pixelsize=14:autohint=auto"
 					"Font Awesome 5 Free:pixelsize=12:autohint=1", 
     		                        "Font Awesome 5 Brands:pixelsize=12:autohint=1", 
 					"Font Awesome 5 Free:pixelsize=12:style=solid:autohint=1"};
