@@ -9,7 +9,7 @@ static const char *fonts[]          = { "Exo2-Regular:pixelsize=14:autohint=auto
 					"Font Awesome 5 Free:pixelsize=12:autohint=1", 
     		                        "Font Awesome 5 Brands:pixelsize=12:autohint=1", 
 					"Font Awesome 5 Free:pixelsize=12:style=solid:autohint=1"};
-static const char dmenufont[]       = "MudheadFREE:size=14";
+static const char dmenufont[]       = "Exo2-Regular:size=14";
 
 static const char col_bg[]          = "#1a1b26";
 static const char col_fg[]          = "#a9b1d6";
@@ -69,11 +69,13 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *firefox[] = {"firefox", NULL};
+static const char *wallpaper[] = {"gen-wallpaper", NULL};
 
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
     { MODKEY,	                    XK_w,      spawn,          {.v = firefox} },
+    { MODKEY|ShiftMask,	            XK_w,      spawn,          {.v = wallpaper} },
     { MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
     { MODKEY | ShiftMask,           XK_p,      spawn,          {.v = roficmd} },
     { MODKEY,	                    XK_Return, spawn,          {.v = termcmd } },
