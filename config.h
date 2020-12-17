@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;       
-static const unsigned int snap      = 32;      
+static const unsigned int borderpx  = 2;       
+static const unsigned int snap      = 10; //32      
 static const int showbar            = 1;       
 static const int topbar             = 1;  
 static const char *fonts[]          = { "Exo2-Regular:pixelsize=14:autohint=auto"
