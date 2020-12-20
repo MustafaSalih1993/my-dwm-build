@@ -13,10 +13,10 @@ static const char dmenufont[]       = "Exo2-Regular:size=14";
 
 static const char col_bg[]          = "#1a1b26";
 static const char col_fg[]          = "#a9b1d6";
-static const char col_border[]      = "#ff7a93";
+static const char col_border[]      = "#444b6a";
 static const char col_sfg[]         = "#bb9af7";
-static const char col_sbg[]         = "#444b6a";
-static const char col_sborder[]     = "#b9f27c";
+static const char col_sbg[]         = "#32344a";
+static const char col_sborder[]     = "#787c99";
 static const char *colors[][3]      = {
     /*               fg         bg         border   */
     [SchemeNorm] = { col_fg, col_bg, col_border },
