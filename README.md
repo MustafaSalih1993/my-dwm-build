@@ -1,4 +1,8 @@
 # mustafa's build of dwm
+My build of dwm window manager
+
+## Status bar
+[rsblocks](https://github.com/MustafaSalih1993/rsblocks)
 
 ## Screenshots
 <p align="center">
