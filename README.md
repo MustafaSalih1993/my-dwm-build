@@ -1,5 +1,14 @@
 # [mustafa](https://github.com/MustafaSalih1993)'s build of dwm
 
+My build of dwm window manager
+<br/>
+<br/>
+
+## Status bar
+[rsblocks](https://github.com/MustafaSalih1993/rsblocks)
+<br/>
+<br/>
+
 ## Screenshots
 <p align="center">
 	<img src="./screenshots/1.png"/>
@@ -9,7 +18,9 @@
 </p><br>
 <p align="center">
 	<img src="./screenshots/3.png"/>
-</p><br>
+</p>
+<br/>
+<br/>
 
 ## Patches
 All the patches included in the `patchs` folder, (in case you want to just download the patch and apply it on your own build).
