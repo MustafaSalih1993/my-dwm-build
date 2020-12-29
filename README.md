@@ -1,4 +1,4 @@
-# mustafa's build of dwm
+# [mustafa](https://github.com/MustafaSalih1993)'s build of dwm
 
 ## Screenshots
 <p align="center">
