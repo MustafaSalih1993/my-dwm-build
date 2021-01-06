@@ -1,5 +1,3 @@
-/* See LICENSE file for copyright and license details. */
-
 /* appearance */
 static const unsigned int borderpx  = 2;       
 static const unsigned int snap      = 10; //32      
@@ -9,6 +7,7 @@ static const char *fonts[]          = { "Exo2-Regular:pixelsize=14:autohint=auto
 					"Font Awesome 5 Free:pixelsize=12:autohint=1", 
     		                        "Font Awesome 5 Brands:pixelsize=12:autohint=1", 
 					"Font Awesome 5 Free:pixelsize=12:style=solid:autohint=1"};
+
 static const char dmenufont[]       = "Exo2-Regular:size=14";
 
 static const char col_bg[]          = "#1a1b26";
@@ -23,14 +22,14 @@ static const char *colors[][3]      = {
     [SchemeSel]  = { col_fg, col_sbg,  col_sborder  }
 };
 
-/* tagging */
+
 static const char *tags[] = {"", "", "", "", "", ""};
 
 
 static const Rule rules[] = {
-    /* xprop(1):
-     *	WM_CLASS(STRING) = instance, class
-     */
+    
+     /*	WM_CLASS(STRING) = instance, class*/
+			     
     /* class      instance    title       tags mask     isfloating   monitor */
     { "Firefox",  NULL,       NULL,       1 << 2,	         0,           -1 },
     { "Code",     NULL,	      NULL,	  2,    	         0,           -1 },
@@ -69,7 +68,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", "-show-icons", NULL };
 static const char *firefox[] = {"firefox", NULL};
-static const char *wallpaper[] = {"gen-wallpaper", NULL};
+static const char *wallpaper[] = {"gen-wallpaper", NULL}; //My custom script to get a random wallpaper from my wallpapers directory
 
 
 static Key keys[] = {
@@ -106,10 +105,10 @@ static Key keys[] = {
     { MODKEY,                       XK_F6,     spawn,          SHCMD("playerctl previous; mocp -r") },
     { MODKEY,                       XK_F7,     spawn,          SHCMD("playerctl play-pause; mocp -G") },
     { MODKEY,                       XK_F8,     spawn,          SHCMD("playerctl next; mocp -f") },
-    { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 1%-;killsleep") },
-    { MODKEY,                       XK_F10,    spawn,          SHCMD("amixer sset Master 1%+;killsleep")},
-    {MODKEY | ControlMask,          XK_r,      spawn,          SHCMD("rst")},
-    {MODKEY | ControlMask,          XK_p,      spawn,          SHCMD("kpwr")},
+    { MODKEY,                       XK_F9,     spawn,          SHCMD("amixer sset Master 1%-;") },
+    { MODKEY,                       XK_F10,    spawn,          SHCMD("amixer sset Master 1%+;")},
+    {MODKEY | ControlMask,          XK_r,      spawn,          SHCMD("rst")},// reboot my machine
+    {MODKEY | ControlMask,          XK_p,      spawn,          SHCMD("kpwr")},// poweroff my machine
     TAGKEYS(XK_1,                      0)
     TAGKEYS(XK_2,                      1)
     TAGKEYS(XK_3,                      2)
