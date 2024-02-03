@@ -13,13 +13,6 @@ My build of dwm window manager
 <p align="center">
 	<img src="./screenshots/1.png"/>
 </p><br>
-<p align="center">
-	<img src="./screenshots/2.png"/>
-</p><br>
-<p align="center">
-	<img src="./screenshots/3.png"/>
-</p>
-<br/>
 <br/>
 
 ## Patches
